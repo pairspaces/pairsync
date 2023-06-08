@@ -49,7 +49,7 @@ jobs:
       - name: Sync PairSpace
         uses: pairspaces/sync-pairspace-action@v1
         with:
-          repository_name: pairsync
+          repository: ${{ github.repository }}
 ```
 
 ## Inputs and Outputs
@@ -60,7 +60,7 @@ PairSync requires the following inputs.
 
 | Input | Description |
 |-------|-------------|
-| `repository_name` | The name of the repository running the GitHub Action |
+| `repository` | The owner and repository name, e.g., `pairspaces/pairsync`; this is available from any GitHub Action's context as `github.repository` |
 
 PairSync does not have any optional inputs.
 
