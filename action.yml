@@ -1,12 +1,19 @@
 name: Sync PairSpace
 description: 'Synchronize from GitHub to your PairSpace via GitHub Actions without sharing SSH keys.'
-author: 'code <code@getvenv.com>'
+author: 'code <code@pairspaces.com>'
 branding:
-  color: gray
+  color: gray-dark
   icon: refresh-cw
 inputs:
-  repository_name:
+  region:
+    description: PairSpace region
+    required: false
+    default: 'us-east-1'
+  repository:
     description: Repository name.
+    required: true
+  user:
+    description: GitHub user id
     required: true
 runs:
   using: 'docker'
