@@ -2,7 +2,7 @@
 
 PairSync is how you keep your PairSpaces up-to-date with the latest version of your code. You don't have to share credentials or keys with us, so you remain in control of when you push your data to your PairSpace.
 
-To create a PairSpace account to use this GitHub Action, visit https://pairspaces.com. To learn more about creating a PairSpace role to sync your repository with PairSpace, see https://docs.pairspaces.com/sync. To learn more about how PairSpaces protects your code and data, see https://pairspaces.com/secure.
+To create a PairSpace account to use this GitHub Action, visit https://pairspaces.com. To learn more about creating a PairSpace role to sync your repository with PairSpace, see https://docs.pairspaces.com/spaces/repositories. To learn more about how PairSpaces protects your code and data, see https://pairspaces.com/pages/security.
 
 ## Usage
 
@@ -49,7 +49,7 @@ jobs:
           aws-region: ${{ secrets.PAIRSPACE_REGION }}
 
       - name: Sync PairSpace
-        uses: pairspaces/sync-pairspace-action@v1
+        uses: pairspaces/pairsync@v1
         with:
           repository: ${{ github.repository }}
           user: ${{ github.actor_id }}
